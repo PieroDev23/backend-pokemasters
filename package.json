@@ -1,0 +1,45 @@
+{
+  "name": "backend-pokemasters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "start:build": "tsc && tsc-alias",
+    "start:up": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "7.22.15",
+    "@babel/preset-typescript": "7.22.15",
+    "@types/bcryptjs": "2.4.3",
+    "@types/cors": "2.8.14",
+    "@types/dotenv": "8.2.0",
+    "@types/express": "4.17.17",
+    "@types/jest": "29.5.4",
+    "@types/jsonwebtoken": "9.0.2",
+    "@types/morgan": "1.9.5",
+    "@types/node": "20.6.0",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
+    "babel-jest": "^29.6.4",
+    "jest": "29.6.4",
+    "ts-jest": "29.1.1",
+    "ts-node-dev": "2.0.0",
+    "tsc-alias": "1.8.7",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "jsonwebtoken": "9.0.2",
+    "morgan": "1.10.0",
+    "mysql2": "3.6.1"
+  }
+}
