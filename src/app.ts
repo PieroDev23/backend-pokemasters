@@ -25,10 +25,16 @@ export class Pokemasters implements App {
     }
 
     listen(port: number | string): Promise<void> {
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
             this.app.listen(port, () => {
-                console.log(`⚡ Server running on port ${port}`)
-                resolve()
+                try {
+                    console.log(`⚡ Server running on port ${port}`)
+                    resolve()
+                } catch (error) {
+                    if (error instanceof Error) {
+                        reject(error.message)
+                    }
+                }
             })
         })
     }
