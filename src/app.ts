@@ -3,6 +3,7 @@ import { App } from "@base/interfaces/base.interfaces";
 import express from 'express';
 import cors from "cors";
 import morgan from 'morgan';
+import { authRouter } from '@modules/auth/routes/auth.routes';
 
 export class Pokemasters implements App {
     app: express.Application;
@@ -14,7 +15,7 @@ export class Pokemasters implements App {
     }
 
     routes(): void {
-        // this.app.use('/auth', )
+        this.app.use('/auth', authRouter);
     }
 
     middlewares(): void {
@@ -26,6 +27,7 @@ export class Pokemasters implements App {
 
     listen(port: number | string): Promise<void> {
         return new Promise((resolve, reject) => {
+            // listening app...
             this.app.listen(port, () => {
                 try {
                     console.log(`⚡ Server running on port ${port}`)

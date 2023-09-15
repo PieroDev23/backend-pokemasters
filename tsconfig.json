@@ -31,13 +31,13 @@
         "./src/*"
       ],
       "@modules/auth/*": [
-        "./src/modules/Auth/*"
+        "./src/modules/auth/*"
       ],
       "@modules/main/*": [
-        "./src/modules/Main/*"
+        "./src/modules/main/*"
       ],
       "@modules/shared/*": [
-        "./src/modules/Shared/*"
+        "./src/modules/shared/*"
       ]
     }, /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */

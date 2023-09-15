@@ -4,7 +4,6 @@ import { Pool, createPool } from 'mysql2/promise'
 export class Database {
     private static instance: Database;
 
-
     private constructor() { }
 
     static getInstance() {
@@ -16,8 +15,7 @@ export class Database {
     }
 
 
-    get pool(): Pool {
-
+    pool(): Pool {
         if (process.env.ENVIRONMENT === 'development') {
             return createPool({ ...development });
         }
