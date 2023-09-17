@@ -89,7 +89,12 @@ const config = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^@base/(.*)$': '<rootDir>/src/$1',
+    '^@modules/auth/(.*)$': '<rootDir>/src/modules/auth/$1',
+    '^@modules/main/(.*)$': '<rootDir>/src/modules/main/$1',
+    '^@modules/shared/(.*)$': '<rootDir>/src/modules/shared/$1',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

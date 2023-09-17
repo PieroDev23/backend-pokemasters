@@ -1,13 +1,22 @@
 import { BaseController } from "@base/lib/http/BaseController.http";
 import { Request, Response } from "express";
 
-export class LoginController extends BaseController {
-    protected async response(req: Request, res: Response): Promise<any> {
-        try {
-            this.ok(res, 'everything its fine')
-        } catch (error) {
-            this.serverError(res, error);
-        }
-    }
 
+export class RegisterController extends BaseController {
+
+    protected async response(req: Request, res: Response): Promise<any> {
+        const body = req.body;
+
+        try {
+
+            this.ok(res, {
+                id: 1,
+                body
+            })
+
+        } catch (err) {
+
+        }
+
+    }
 }

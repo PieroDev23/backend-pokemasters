@@ -1,0 +1,11 @@
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "first_name": " akshdkhjsdhjksdhjkHASAJSAS",
+    "last_name": " kjahsdkjashdkjashd                  ",
+    "username": " hjasdhkjasdjkHAAAAA",
+    "nickname": " aaaaaaAAAAA     ",
+    "password": "ppawwwA",
+    "email": "paspas@test.com"
+}

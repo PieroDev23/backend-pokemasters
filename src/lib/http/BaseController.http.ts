@@ -25,7 +25,7 @@ export abstract class BaseController {
     }
 
     protected json(res: Response, code: number, message: unknown) {
-        res.status(code).json({ message });
+        res.status(code).json(message);
     }
 
     protected ok<T>(res: Response, payload: T) {
@@ -33,15 +33,15 @@ export abstract class BaseController {
     }
 
     protected created(res: Response, payload?: unknown) {
-        this.json(res, 201, payload === null ? { msg: 'created succesfully' } : payload);
+        this.json(res, 201, !payload ? { msg: 'created succesfully' } : payload);
     }
 
     protected badRequest(res: Response, payload?: unknown) {
-        this.json(res, 400, payload === null ? { msg: 'bad request' } : payload);
+        this.json(res, 400, !payload ? { msg: 'bad request' } : payload);
     }
 
     protected unauthorized(res: Response, payload?: unknown) {
-        this.json(res, 401, payload === null ? { msg: 'bad request' } : payload);
+        this.json(res, 401, !payload ? { msg: 'bad request' } : payload);
     }
 
     protected serverError(res: Response, error: unknown) {
